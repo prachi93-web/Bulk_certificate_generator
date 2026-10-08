@@ -18,14 +18,7 @@ The API accepts multiple recipients in a single request, validates their data, g
 
 ## Tech Stack
 
-- Python
-- FastAPI
-- SQLite
-- SQLAlchemy
-- Pydantic
-- ReportLab
-- Pytest
-- HTTPX
+Python | FastAPI | SQLite | SQLAlchemy | Pydantic | ReportLab | Pytest | HTTPX
 
 ## Project Structure
 
@@ -106,6 +99,31 @@ http://127.0.0.1:8000/docs
 ```
 
 The SQLite database is created automatically when the application starts.
+
+## Testing
+
+The project contains 6 automated tests using Pytest.
+
+Tests cover:
+
+1. Job creation
+2. Input validation
+3. Certificate generation
+4. Job status
+5. Individual certificate failure
+6. Certificate retrieval
+
+Run tests with:
+
+```bash
+python -m pytest
+```
+
+Expected result:
+
+```text
+6 passed
+```
 
 ## API Endpoints
 
@@ -246,30 +264,6 @@ Retrieve generated certificate
 
 BackgroundTasks was selected because the project is lightweight and does not require additional infrastructure such as Celery or Redis.
 
-## Testing
-
-The project contains 6 automated tests using Pytest.
-
-Tests cover:
-
-1. Job creation
-2. Input validation
-3. Certificate generation
-4. Job status
-5. Individual certificate failure
-6. Certificate retrieval
-
-Run tests with:
-
-```bash
-python -m pytest
-```
-
-Expected result:
-
-```text
-6 passed
-```
 
 ## Database
 
